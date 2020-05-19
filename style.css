@@ -170,7 +170,7 @@ body {
     box-shadow: 0 0 4px 4px #ffffff4a;
 }
 .llama {
-    color: #00a4db;
+    color: #0099cc;
     font-weight: bold;
     text-decoration: none;
 }
@@ -294,4 +294,23 @@ textarea {
 }
 .menu-option:hover {
     background-color: rgb(216, 216, 216);
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+    height:100%;
+  }
+  99% {
+    opacity:0;
+    height:100%;
+  }
+  100% {
+    opacity:0;
+    height:0;
+  }
+}
+
+.loaded div#loader {
+    animation: fadeout 0.5s ease-in 0.3s 1 normal forwards;
 }

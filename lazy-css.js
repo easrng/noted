@@ -4,6 +4,11 @@ export default (async () => {
     "https://unpkg.com/sweetalert2@9.11.0/dist/sweetalert2.min.css"
   )).text();
   document.head.appendChild(s);
+  s = document.createElement("style");
+  s.innerHTML = await (await fetch(
+    "./style.css"
+  )).text();
+  document.head.appendChild(s);
 })();
 
 (async()=>{

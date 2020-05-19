@@ -39,7 +39,6 @@
       as="fetch"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
       href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48ZGVmcz4NCiAgICA8c3R5bGU+DQogICAgICAgICNwYXRoIHsNCiAgICAgICAgICAgIGZpbGw6IGJsYWNrOw0KICAgICAgICB9DQogICAgICAgIEBtZWRpYSAocHJlZmVycy1jb2xvci1zY2hlbWU6IGRhcmspIHsNCiAgICAgICAgICAgICNwYXRoIHsNCiAgICAgICAgICAgICAgICBmaWxsOndoaXRlOw0KICAgICAgICAgICAgfQ0KICAgICAgICB9DQogICAgPC9zdHlsZT4NCjwvZGVmcz4NCjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xNCAySDZjLTEuMSAwLTEuOTkuOS0xLjk5IDJMNCAyMGMwIDEuMS44OSAyIDEuOTkgMkgxOGMxLjEgMCAyLS45IDItMlY4bC02LTZ6bTIgMTZIOHYtMmg4djJ6bTAtNEg4di0yaDh2MnptLTMtNVYzLjVMMTguNSA5SDEzeiIgaWQ9InBhdGgiLz48L3N2Zz4="
@@ -65,16 +64,45 @@
         width: 1em;
       }
     </style>
+    <style>
+      div#loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #23232e;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      div#loader:before {
+        content: "noted";
+        color: #fff;
+        font-size: 3rem;
+        font-family: sans-serif;
+      }
+    </style>
     <noscript>
+      <link rel="stylesheet" href="style.css" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block"
+      />
       <style>
         .jsOnly {
           display: none;
         }
       </style>
     </noscript>
+    <meta
+      name="description"
+      content="Noted is a simple, fast, and modern notes app. With powerful sharing technology, it is simple to send a copy of a note to a friend."
+    />
   </head>
-
   <body>
+    <div id="loader"></div>
     <div id="wrap">
       <input type="checkbox" id="showHideMenu" />
       <div id="sidebar" class="sidenav">
@@ -134,6 +162,7 @@
                 class="llama"
                 target="_blank"
                 href="https://github.com/JeffaloBob/noted"
+                rel="noopener"
                 >GitHub repo.</a
               >
             </p>
