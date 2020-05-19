@@ -1,11 +1,15 @@
 # noted
-A very rough notes app
 
-## why?
-because i can
+Noted is a simple, fast, and modern notes app. With powerful sharing technology, it is simple to send a copy of a note to a friend.
 
-## how i use
-well it needs some work and design, but it should be very straight forward. press "new" dont put something stupid and you'll be good
+## Why?
 
-## it has problems
-yes i know and i really want to fix them, so please add issue on github and if you know how to fix it, go right ahead and add a pull request. it is appreciated
+Because I can
+
+## How do I use it?
+
+Simply press new, then type away. More options are available in the file's menu.
+
+## Bug reports
+
+Please leav an issue on the Github repo.
