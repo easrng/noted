@@ -10,4 +10,5 @@ import * as backend from "./backend.js";
   await ui.init();
   await store.init();
   await backend.init();
+  document.body.classList.add("loaded")
 })();
