@@ -4,71 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>noted</title>
+    <link href="./main.js" rel="preload" as="script" crossorigin="anonymous" />
     <link
-      href="./main.js"
+      href="./lazy-css.js"
       rel="preload"
       as="script"
-          crossorigin="anonymous"
-    />
-    <link
-      href="./swal2-css.js"
-      rel="preload"
-      as="script"
-          crossorigin="anonymous"
+      crossorigin="anonymous"
     />
     <link
       href="https://cdn.pika.dev/sweetalert2@%5E9.7.1"
       rel="preload"
       as="script"
-          crossorigin="anonymous"
+      crossorigin="anonymous"
     />
-    <link
-      href="./ui.js"
-      rel="preload"
-      as="script"
-          crossorigin="anonymous"
-    />
-    <link
-      href="./store.js"
-      rel="preload"
-      as="script"
-          crossorigin="anonymous"
-    />
+    <link href="./ui.js" rel="preload" as="script" crossorigin="anonymous" />
+    <link href="./store.js" rel="preload" as="script" crossorigin="anonymous" />
     <link
       href="./backend.js"
       rel="preload"
       as="script"
-          crossorigin="anonymous"
+      crossorigin="anonymous"
     />
-    <link
-      href="./files.js"
-      rel="preload"
-      as="script"
-          crossorigin="anonymous"
-    />
+    <link href="./files.js" rel="preload" as="script" crossorigin="anonymous" />
     <link
       href="./elements.js"
       rel="preload"
       as="script"
-          crossorigin="anonymous"
+      crossorigin="anonymous"
     />
-    <link
-      href="./utils.js"
-      rel="preload"
-      as="script"
-          crossorigin="anonymous"
-    />
+    <link href="./utils.js" rel="preload" as="script" crossorigin="anonymous" />
     <link
       href="https://unpkg.com/sweetalert2@9.11.0/dist/sweetalert2.min.css"
       rel="preload"
       as="fetch"
-          crossorigin="anonymous"
+      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block"
-      rel="stylesheet"
-    />
     <link
       rel="icon"
       href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48ZGVmcz4NCiAgICA8c3R5bGU+DQogICAgICAgICNwYXRoIHsNCiAgICAgICAgICAgIGZpbGw6IGJsYWNrOw0KICAgICAgICB9DQogICAgICAgIEBtZWRpYSAocHJlZmVycy1jb2xvci1zY2hlbWU6IGRhcmspIHsNCiAgICAgICAgICAgICNwYXRoIHsNCiAgICAgICAgICAgICAgICBmaWxsOndoaXRlOw0KICAgICAgICAgICAgfQ0KICAgICAgICB9DQogICAgPC9zdHlsZT4NCjwvZGVmcz4NCjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xNCAySDZjLTEuMSAwLTEuOTkuOS0xLjk5IDJMNCAyMGMwIDEuMS44OSAyIDEuOTkgMkgxOGMxLjEgMCAyLS45IDItMlY4bC02LTZ6bTIgMTZIOHYtMmg4djJ6bTAtNEg4di0yaDh2MnptLTMtNVYzLjVMMTguNSA5SDEzeiIgaWQ9InBhdGgiLz48L3N2Zz4="
@@ -76,6 +47,31 @@
     <script type="module">
       import "./main.js";
     </script>
+    <style id="icons">
+      .material-icons {
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: "liga";
+        -webkit-font-smoothing: antialiased;
+        color: transparent;
+        width: 1em;
+      }
+    </style>
+    <noscript>
+      <style>
+        .jsOnly {
+          display: none;
+        }
+      </style>
+    </noscript>
   </head>
 
   <body>
@@ -122,23 +118,27 @@
           class="contents hidden"
           id="contents"
         ></textarea>
-        <p id="splashtext">
+        <div id="splashtext">
           <noscript>
-            This app requires Javascript for it to work. Sorry!<br /><br />
+            <p>
+              This app requires Javascript for it to work. Sorry!
+            </p>
           </noscript>
-          <script>
-            document.write(`
-          select a document or create one with the panel on the left.
-          <br /><br />
-          suggestions, feedback or issues? check out the
-          <a
-            class="llama"
-            target="_blank"
-            href="https://github.com/JeffaloBob/noted"
-            >GitHub repo.</a
-          >`);
-          </script>
-        </p>
+
+          <div class="jsOnly">
+            <p>
+              select a document or create one with the panel on the left.
+              <br /><br />
+              suggestions, feedback or issues? check out the
+              <a
+                class="llama"
+                target="_blank"
+                href="https://github.com/JeffaloBob/noted"
+                >GitHub repo.</a
+              >
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="context-menu" id="context-menu">
