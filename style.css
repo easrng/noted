@@ -1,3 +1,6 @@
+i.material-icons {
+  max-width: 1em;
+}
 hr::before {
   content: "";
   width: 100%;
